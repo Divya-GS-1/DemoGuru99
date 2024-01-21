@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-01-21T21:59:52 IST" name="SanitySuite" finished-at="2024-01-21T22:00:36 IST" duration-ms="43581">
+    <groups>
+    </groups>
+    <test started-at="2024-01-21T21:59:52 IST" name="Chrome" finished-at="2024-01-21T22:00:36 IST" duration-ms="43581">
+      <class name="demoBanking.testCases.LoginTC_001">
+        <test-method is-config="true" signature="start_Test(java.lang.String)[pri:0, instance:demoBanking.testCases.LoginTC_001@3527942a]" started-at="2024-01-21T21:59:52 IST" name="start_Test" finished-at="2024-01-21T22:00:14 IST" duration-ms="21597" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- start_Test -->
+        <test-method signature="Login_page()[pri:0, instance:demoBanking.testCases.LoginTC_001@3527942a]" started-at="2024-01-21T22:00:14 IST" name="Login_page" finished-at="2024-01-21T22:00:19 IST" duration-ms="5277" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login_page -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:demoBanking.testCases.LoginTC_001@3527942a]" started-at="2024-01-21T22:00:19 IST" name="tearDown" finished-at="2024-01-21T22:00:20 IST" duration-ms="473" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Login_page status=SUCCESS method=LoginTC_001.Login_page()[pri:0, instance:demoBanking.testCases.LoginTC_001@3527942a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- demoBanking.testCases.LoginTC_001 -->
+      <class name="demoBanking.testCases.HomePageTC_002">
+        <test-method is-config="true" signature="start_Test(java.lang.String)[pri:0, instance:demoBanking.testCases.HomePageTC_002@7d0b7e3c]" started-at="2024-01-21T22:00:20 IST" name="start_Test" finished-at="2024-01-21T22:00:28 IST" duration-ms="8104" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- start_Test -->
+        <test-method signature="Home_page()[pri:0, instance:demoBanking.testCases.HomePageTC_002@7d0b7e3c]" started-at="2024-01-21T22:00:28 IST" name="Home_page" finished-at="2024-01-21T22:00:35 IST" duration-ms="7547" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Home_page -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:demoBanking.testCases.HomePageTC_002@7d0b7e3c]" started-at="2024-01-21T22:00:35 IST" name="tearDown" finished-at="2024-01-21T22:00:36 IST" duration-ms="218" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Home_page status=SUCCESS method=HomePageTC_002.Home_page()[pri:0, instance:demoBanking.testCases.HomePageTC_002@7d0b7e3c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- demoBanking.testCases.HomePageTC_002 -->
+    </test> <!-- Chrome -->
+  </suite> <!-- SanitySuite -->
+</testng-results>

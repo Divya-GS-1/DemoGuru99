@@ -1,0 +1,78 @@
+2024-01-21 16:18:29,894 [main] INFO Automation Test - Logged in successfully and obtained the Page Title
+2024-01-21 16:19:15,874 [main] INFO Automation Test - [INFO] ----- Logged in successfully and obtained the Page Title ----
+2024-01-21 16:53:10,631 [main] INFO Automation Test -  --Entered wrong ID-- 
+2024-01-21 16:53:10,706 [main] INFO Automation Test -  --Alert accepted-- 
+2024-01-21 19:15:47,428 [main] INFO Automation Test - Logged in successfully and obtained the Page Title ----
+2024-01-21 19:16:30,351 [main] INFO Automation Test -  --Entered wrong ID-- 
+2024-01-21 19:16:30,459 [main] INFO Automation Test -  --Alert accepted-- 
+2024-01-21 19:22:43,153 [main] INFO Automation Test - Logged in successfully and obtained the Page Title ----
+2024-01-21 19:22:43,173 [main] INFO Automation Test - Login_pageTest case is failed
+2024-01-21 19:30:35,948 [main] INFO Automation Test -  --Entered wrong ID-- 
+2024-01-21 19:30:36,098 [main] INFO Automation Test -  --Alert accepted-- 
+2024-01-21 19:30:56,083 [main] INFO Automation Test - Logged in successfully and obtained the Page Title ----
+2024-01-21 19:30:56,091 [main] INFO Automation Test - Login_pageTest case is failed
+2024-01-21 19:37:10,080 [main] INFO Automation Test - Logged in successfully and obtained the Page Title ----
+2024-01-21 19:37:10,386 [main] INFO Automation Test - Login_pageTest case is failed
+2024-01-21 19:37:42,633 [main] INFO Automation Test -  --Entered wrong ID-- 
+2024-01-21 19:37:42,681 [main] INFO Automation Test -  --Alert accepted-- 
+2024-01-21 19:38:51,712 [main] INFO Automation Test - Logged in successfully and obtained the Page Title ----
+2024-01-21 19:38:51,819 [main] INFO Automation Test - Login_pageTest case is failed
+2024-01-21 19:39:04,493 [main] INFO Automation Test -  --Entered wrong ID-- 
+2024-01-21 19:39:04,576 [main] INFO Automation Test -  --Alert accepted-- 
+2024-01-21 19:40:57,542 [main] INFO Automation Test - Logged in successfully and obtained the Page Title ----
+2024-01-21 19:40:57,773 [main] INFO Automation Test - Login_pageTest case is failed
+2024-01-21 19:41:21,821 [main] INFO Automation Test -  --Entered wrong ID-- 
+2024-01-21 19:41:21,860 [main] INFO Automation Test -  --Alert accepted-- 
+2024-01-21 19:44:55,325 [main] INFO Automation Test - Logged in successfully and obtained the Page Title ----
+2024-01-21 19:44:55,757 [main] INFO Automation Test - Login_pageTest case is failed
+2024-01-21 19:45:15,825 [main] INFO Automation Test -  --Entered wrong ID-- 
+2024-01-21 19:45:15,926 [main] INFO Automation Test -  --Alert accepted-- 
+2024-01-21 20:36:34,042 [main] INFO Automation Test - Logged in successfully and obtained the Page Title ----
+2024-01-21 20:36:34,253 [main] INFO Automation Test - Login_pageTest case is failed
+2024-01-21 20:36:47,435 [main] INFO Automation Test -  --Entered wrong ID-- 
+2024-01-21 20:36:47,499 [main] INFO Automation Test -  --Alert accepted-- 
+2024-01-21 20:44:20,151 [main] INFO Automation Test - Logged in successfully and obtained the Page Title ----
+2024-01-21 20:44:23,194 [main] INFO Automation Test - Login_pageTest case is failed
+2024-01-21 20:45:10,944 [main] INFO Automation Test -  --Entered wrong ID-- 
+2024-01-21 20:45:11,028 [main] INFO Automation Test -  --Alert accepted-- 
+2024-01-21 20:46:43,257 [main] INFO Automation Test - Logged in successfully and obtained the Page Title ----
+2024-01-21 20:46:44,727 [main] INFO Automation Test - Login_pageTest case is failed
+2024-01-21 20:47:01,948 [main] INFO Automation Test -  --Entered wrong ID-- 
+2024-01-21 20:47:01,990 [main] INFO Automation Test -  --Alert accepted-- 
+2024-01-21 20:52:16,499 [main] INFO Automation Test - Logged in successfully and obtained the Page Title ----
+2024-01-21 20:52:16,533 [main] INFO Automation Test - Login_pageTest case is failed
+2024-01-21 20:52:46,280 [main] INFO Automation Test -  --Entered wrong ID-- 
+2024-01-21 20:52:47,659 [main] INFO Automation Test - Home_pageTest case is failed
+2024-01-21 20:59:32,408 [main] INFO Automation Test - Logged in successfully and obtained the Page Title ----
+2024-01-21 20:59:32,443 [main] INFO Automation Test - Login_pageTest case is failed
+2024-01-21 20:59:47,302 [main] INFO Automation Test -  --Entered wrong ID-- 
+2024-01-21 20:59:47,335 [main] INFO Automation Test -  --Alert accepted-- 
+2024-01-21 21:00:39,327 [main] INFO Automation Test - Logged in successfully and obtained the Page Title ----
+2024-01-21 21:00:39,357 [main] INFO Automation Test - Login_pageTest case is failed
+2024-01-21 21:01:21,715 [main] INFO Automation Test - Home_pageTest case is failed
+2024-01-21 21:01:48,236 [main] INFO Automation Test - Logged in successfully and obtained the Page Title ----
+2024-01-21 21:01:48,248 [main] INFO Automation Test -  ---Successfuly Title is Verified--- 
+2024-01-21 21:01:59,176 [main] INFO Automation Test -  --Entered wrong ID-- 
+2024-01-21 21:01:59,196 [main] INFO Automation Test -  --Alert accepted-- 
+2024-01-21 21:03:11,258 [main] INFO Automation Test - Logged in successfully and obtained the Page Title ----
+2024-01-21 21:03:11,264 [main] INFO Automation Test -  ---Successfuly Title is Verified--- 
+2024-01-21 21:03:23,235 [main] INFO Automation Test -  --Entered wrong ID-- 
+2024-01-21 21:03:23,270 [main] INFO Automation Test -  --Alert accepted-- 
+2024-01-21 21:06:05,501 [main] INFO Automation Test - Logged in successfully and obtained the Page Title ----
+2024-01-21 21:06:05,508 [main] INFO Automation Test -  ---Successfuly Title is Verified--- 
+2024-01-21 21:06:20,521 [main] INFO Automation Test -  --Entered wrong ID-- 
+2024-01-21 21:06:20,547 [main] INFO Automation Test -  --Alert accepted-- 
+2024-01-21 21:08:44,829 [main] INFO Automation Test - Logged in successfully and obtained the Page Title ----
+2024-01-21 21:08:44,841 [main] INFO Automation Test -  ---Successfuly Title is Verified--- 
+2024-01-21 21:08:56,986 [main] INFO Automation Test -  --Entered wrong ID-- 
+2024-01-21 21:08:57,008 [main] INFO Automation Test -  --Alert accepted-- 
+2024-01-21 21:28:00,939 [main] INFO Automation Test - Logged in successfully and obtained the Page Title ----
+2024-01-21 21:28:00,948 [main] INFO Automation Test -  ---Successfuly Title is Verified--- 
+2024-01-21 21:28:43,549 [main] INFO Automation Test - Home_pageTest case is failed
+2024-01-21 21:30:06,701 [main] INFO Automation Test - Logged in successfully and obtained the Page Title ----
+2024-01-21 21:30:06,706 [main] INFO Automation Test -  ---Successfuly Title is Verified--- 
+2024-01-21 21:33:16,824 [main] INFO Automation Test - Home_pageTest case is failed
+2024-01-21 22:00:19,625 [main] INFO Automation Test - Logged in successfully and obtained the Page Title ----
+2024-01-21 22:00:19,681 [main] INFO Automation Test -  ---Successfuly Title is Verified--- 
+2024-01-21 22:00:35,795 [main] INFO Automation Test -  --Entered wrong ID-- 
+2024-01-21 22:00:35,856 [main] INFO Automation Test -  --Alert accepted-- 
