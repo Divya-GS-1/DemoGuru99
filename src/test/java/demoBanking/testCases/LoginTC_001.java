@@ -18,6 +18,8 @@ public class LoginTC_001 extends BaseClass {
 		logger.info("Logged in successfully and obtained the Page Title ----");
 		System.out.println("line in tc 1 is	 added");
 		System.out.println(" second line is added");
+		System.out.println(" third ");
+		
 		if(Title.contains("HomePage")) {
 			Assert.assertTrue(true);
 			logger.info(" ---Successfuly Title is Verified--- ");
