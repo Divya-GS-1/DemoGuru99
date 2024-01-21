@@ -16,6 +16,8 @@ public class LoginTC_001 extends BaseClass {
 		String Title=driver.getTitle();
 		System.out.println("Page Title: "+Title);
 		logger.info("Logged in successfully and obtained the Page Title ----");
+		System.out.println("line in tc 1 is	 added");
+		System.out.println(" second line is added");
 		if(Title.contains("HomePage")) {
 			Assert.assertTrue(true);
 			logger.info(" ---Successfuly Title is Verified--- ");

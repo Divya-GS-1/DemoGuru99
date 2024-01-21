@@ -19,6 +19,7 @@ public class HomePageTC_002 extends BaseClass {
 		System.out.println("Alert seen: " + alertText);
 		driver.switchTo().alert().accept();
 		logger.info(" --Alert accepted-- ");
+		System.out.println("line is added");
 
 	}
 
