@@ -19,6 +19,7 @@ public class LoginTC_001 extends BaseClass {
 		System.out.println("line in tc 1 is	 added");
 		System.out.println(" second line is added");
 		System.out.println(" third ");
+		System.out.println(" forth");
 		
 		if(Title.contains("HomePage")) {
 			Assert.assertTrue(true);
