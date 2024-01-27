@@ -16,7 +16,7 @@ public class Utility {
 		
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		File source = ts.getScreenshotAs(OutputType.FILE);
-		String destination = "./Screenshots/" + Testcase_name + ".png";
+		String destination = System.getProperty("user.dir")+File.separator+"Screenshots"+File.separator+Testcase_name+".png";
 		try {
 			FileUtils.copyFile(source, new File(destination));
 		} catch (Exception e) {

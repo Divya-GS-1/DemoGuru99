@@ -19,7 +19,7 @@ public class LoginTC_001 extends BaseClass {
 		extentTest.log(Status.INFO, " === Logged in successfully and obtained the Page Title === "+Title);
 		logger.info(" === Logged in successfully and obtained the Page Title === ");
 		
-		if(Title.contains("HomePage")) {
+		if(Title.contains("HomePage1")) {
 			Assert.assertTrue(true);
 			logger.info(" === Successfuly Title is Verified === ");
 		} else {
