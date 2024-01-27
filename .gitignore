@@ -5,6 +5,6 @@
 bin/
 build/
 target/
-test-output/
+/test-output/
 log/
 /target/
