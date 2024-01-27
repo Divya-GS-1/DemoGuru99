@@ -12,7 +12,7 @@ public class HomePageTC_002 extends BaseClass {
 	public void Home_page() {
 		LoginPage login = new LoginPage(driver);
 		login.getLogin(userid, userpwd);
-  
+   
 		HomePage home = new HomePage(driver);
 		System.out.println("Entering to HomePage of Demo.Guru99");
 		extentTest.log(Status.INFO, " === Logged in to App successfully === ");
