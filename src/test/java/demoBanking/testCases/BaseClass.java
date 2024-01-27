@@ -5,11 +5,13 @@ import java.lang.reflect.Method;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Date;
+import java.util.HashMap;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -17,7 +19,6 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -79,7 +80,15 @@ public class BaseClass {
 	{
 		System.out.println("@BeforeMethod method started");
 		if(browser.equalsIgnoreCase("Chrome")) {
-			driver = new ChromeDriver();
+			ChromeOptions options = new ChromeOptions();
+		    HashMap<String, Object> chromePrefs = new HashMap<String, Object>();
+		    chromePrefs.put("profile.default_content_settings.popups", 0);
+		    chromePrefs.put("download.default_directory","./Downloads" );
+		    options.setExperimentalOption("prefs", chromePrefs);
+		    options.addArguments("--test-type");
+		    options.addArguments("start-maximized", "disable-popup-blocking");
+			driver = new ChromeDriver(options);
+			
 		}else {
 			driver = new FirefoxDriver();
 		}
