@@ -1,8 +1,0 @@
-demoBanking\testCases\BaseClass.class
-demoBanking\Library\ExtentReport.class
-demoBanking\Library\Utility.class
-demoBanking\Library\ReadConfig.class
-demoBanking\pageObjects\HomePage.class
-demoBanking\testCases\HomePageTC_002.class
-demoBanking\pageObjects\LoginPage.class
-demoBanking\testCases\LoginTC_001.class
