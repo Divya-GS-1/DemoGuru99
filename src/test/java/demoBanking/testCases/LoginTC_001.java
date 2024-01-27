@@ -18,7 +18,7 @@ public class LoginTC_001 extends BaseClass {
 		String Title=driver.getTitle();
 		extentTest.log(Status.INFO, " === Logged in successfully and obtained the Page Title === "+Title);
 		logger.info(" === Logged in successfully and obtained the Page Title === ");
-		
+		 
 		if(Title.contains("HomePage")) {
 			Assert.assertTrue(true);
 			logger.info(" === Successfuly Title is Verified === ");
