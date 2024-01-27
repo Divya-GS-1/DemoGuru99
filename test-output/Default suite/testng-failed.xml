@@ -5,9 +5,11 @@
     <classes>
       <class name="demoBanking.testCases.LoginTC_001">
         <methods>
-          <include name="start_Test"/>
+          <include name="initialize"/>
+          <include name="methodSetup"/>
           <include name="Login_page"/>
           <include name="tearDown"/>
+          <include name="setup"/>
         </methods>
       </class> <!-- demoBanking.testCases.LoginTC_001 -->
     </classes>

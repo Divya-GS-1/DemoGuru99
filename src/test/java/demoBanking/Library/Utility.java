@@ -12,16 +12,17 @@ import org.openqa.selenium.WebDriver;
 
 public class Utility {
 
-	public static void capturescreen(WebDriver driver, String Testcase_name) {
+	public static String capturescreen(WebDriver driver, String Testcase_name) {
 		
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		File source = ts.getScreenshotAs(OutputType.FILE);
-		String destination = "./bankDemoScreenshots/" + Testcase_name + ".png";
+		String destination = "./Screenshots/" + Testcase_name + ".png";
 		try {
 			FileUtils.copyFile(source, new File(destination));
 		} catch (Exception e) {
 			System.out.println("Exception found is: " + e.getMessage());
 			e.printStackTrace();
 		}
+		return destination;
 	}
 }
