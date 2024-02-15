@@ -11,14 +11,15 @@
 <!-- 			<class name="demoBanking.testCases.LoginTC_001" /> -->
 <!-- 			<class name="demoBanking.testCases.HomePageTC_002" /> -->
 				<class name="demoBanking.testCases.LoginTC_2" />
+				<class name="demoBanking.testCases.CreateUser_TC003" />
 		</classes>
 	</test>
-	<test thread-count="5" name="FireFoxSuite">
-		<parameter name="Browser" value="FireFox"></parameter>
-		<classes>
+<!-- 	<test thread-count="5" name="FireFoxSuite"> -->
+<!-- 		<parameter name="Browser" value="FireFox"></parameter> -->
+<!-- 		<classes> -->
 <!-- 			<class name="demoBanking.testCases.LoginTC_001" /> -->
 <!-- 			<class name="demoBanking.testCases.HomePageTC_002" /> -->
-				<class name="demoBanking.testCases.LoginTC_2" />
-		</classes>
-	</test>
+<!-- 				<class name="demoBanking.testCases.LoginTC_2" /> -->
+<!-- 		</classes> -->
+<!-- 	</test> -->
 </suite>
