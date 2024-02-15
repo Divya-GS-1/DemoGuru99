@@ -84,7 +84,7 @@ public class BaseClass {
 		PropertyConfigurator.configure("./log4j.properties");
 		
 		extentTest=extentReport.createTest(method.getName().toString());
-		extentTest.log(Status.INFO, " === "+method.getName().toString()+ " test case STARTED === ");
+		extentTest.log(Status.INFO, " === "+method.getName().toString()+ " test case STARTED === on  "+ browser);
 		System.out.println(" === @BeforeMethod method ended === ");
 	}
 
@@ -105,7 +105,7 @@ public class BaseClass {
             File file=new File(filePath);
             System.out.println("screenshot file exist: "+ file.exists());
             if(file.exists()) {
-            	extentTest.fail(result.getThrowable().getMessage(), MediaEntityBuilder.createScreenCaptureFromPath("."+filePath).build());
+            	extentTest.fail(result.getThrowable().getMessage(), MediaEntityBuilder.createScreenCaptureFromPath(filePath).build());
             }
         }
         else if (result.getStatus() == ITestResult.SUCCESS)
