@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class HomePage {
-	WebDriver driver;
+	private WebDriver driver;
 	
 	public HomePage(WebDriver driver) {
 		this.driver = driver;
@@ -15,13 +15,13 @@ public class HomePage {
 	}
 		
 		@FindBy(xpath = "//*[text()='Edit Customer']")
-		WebElement Edit_Cust;
+		private WebElement Edit_Cust;
 		
 		@FindBy(name = "cusid")
-		WebElement Enter_Id;
+		private WebElement Enter_Id;
 		
 		@FindBy(name = "AccSubmit")
-		WebElement Acc_Submit;
+		private WebElement Acc_Submit;
 		
 
 	public void Home_Page() {

@@ -39,9 +39,9 @@ public class BaseClass {
 	ExtentTest extentTest;
 	
 	ReadConfig read = new ReadConfig();
-	String App_link = read.getApplicationURL();
-	String userid = read.getUserName();
-	String userpwd = read.getPassword();
+	public final String App_link = read.getApplicationURL();
+	public final String userid = read.getUserName();
+	public final String userpwd = read.getPassword();
 
 	public static WebDriver driver;
 	Logger logger;
