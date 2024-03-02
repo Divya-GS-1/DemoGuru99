@@ -5,11 +5,11 @@ import org.testng.annotations.Test;
 
 
 
-public class CreateUser_TC003 extends BaseClass{
+public class CreateUserTC_003 extends BaseClass{
 
 	@Test
 	public void createUser()
 	{
-		Assert.assertTrue(true);
+		Assert.assertTrue(false);
 	}
 }

@@ -34,10 +34,10 @@ import demoBanking.Library.ReadConfig;
 import demoBanking.Library.Utility;
 
 public class BaseClass {
-	
+
 	static ExtentReports extentReport;
 	ExtentTest extentTest;
-	
+
 	ReadConfig read = new ReadConfig();
 	public final String App_link = read.getApplicationURL();
 	public final String userid = read.getUserName();
@@ -45,10 +45,10 @@ public class BaseClass {
 
 	public static WebDriver driver;
 	Logger logger;
-	
+
 	@BeforeTest
 	public void initialize() {
-		System.out.println(" === @BeforeTest method started === ");
+		System.out.println("[INFO]  === @BeforeTest method STARTED === ");
 		String reportFileName = System.getProperty("user.dir")+File.separator+"reports"+File.separator+"index.html";
 		extentReport = new ExtentReports();
 		ExtentSparkReporter spark = new ExtentSparkReporter(reportFileName);
@@ -57,102 +57,88 @@ public class BaseClass {
 		extentReport.attachReporter(spark);
 		extentReport.setSystemInfo("Environment", "QA");
 		extentReport.setSystemInfo("OS", System.getenv("OS"));
-		System.out.println(" === @BeforeTest method ended === ");
+		System.out.println("[INFO]  === @BeforeTest method ENDED === ");
 	}
-/*	
-	@BeforeTest
-	@Parameters("Browser")
-	public void setup(String browser) 
-	{
-		System.out.println("@BeforeTest method executed");
-		if(browser.equalsIgnoreCase("Chrome")) {
-			driver = new ChromeDriver();
-		}else {
-			driver = new FirefoxDriver();
-		}
-	}
-*/	
-	
+
 	@BeforeMethod
 	@Parameters("Browser")
-	public void methodSetup(String browser,Method method) 
-	{
-		System.out.println(" === @BeforeMethod method starte === ");
+	public void Setup(String browser, Method method) {
+		System.out.println("[INFO]  === @BeforeMethod method STARTED === ");
 		startBrowser(browser);
-		
+
 		logger = Logger.getLogger(method.getName().toString());
 		PropertyConfigurator.configure("./log4j.properties");
-		
-		extentTest=extentReport.createTest(method.getName().toString());
-		extentTest.log(Status.INFO, " === "+method.getName().toString()+ " test case STARTED === on  "+ browser);
-		System.out.println(" === @BeforeMethod method ended === ");
+
+		extentTest = extentReport.createTest(method.getName().toString());
+		extentTest.log(Status.INFO, " === " + method.getName().toString() + " test case STARTED === on  " + browser);
+		System.out.println("[INFO]  === @BeforeMethod method ENDED === ");
 	}
 
 	@AfterMethod
-	public void tearDown(ITestResult result) 
-	{
-		System.out.println(" === @AfterMethod method started === ");
-        if (driver!=null){
-            System.out.println("[INFO] === deleteAllCookies === ");
-            driver.manage().deleteAllCookies();
-            }
-        if (result.getStatus() == ITestResult.FAILURE)
-        {
-            System.out.println("[INFO] === Test case "+result.getName()+" FAILED === "); //Which Test Failed and Why (Method Name Output)
-            extentTest.log(Status.FAIL,  MarkupHelper.createLabel(result.getName() + " Test case FAILED due to below issues:", ExtentColor.RED));
-            //String filePath=Utility.capturescreen(driver, result.getName());
-            String filePath = System.getProperty("user.dir")+File.separator+"Screenshots"+File.separator+result.getName()+".png";
-            File file=new File(filePath);
-            System.out.println("screenshot file exist: "+ file.exists());
-            if(file.exists()) {
-            	extentTest.fail(result.getThrowable().getMessage(), MediaEntityBuilder.createScreenCaptureFromPath(filePath).build());
-            }
-        }
-        else if (result.getStatus() == ITestResult.SUCCESS)
-        {
-            System.out.println("[INFO] === Test case "+result.getName()+" PASSED === ");
-            extentTest.log(Status.PASS, MarkupHelper.createLabel(result.getName() + " Test Case PASSED.", ExtentColor.GREEN));
-            System.out.println("====================================================================================================="); 
-            System.out.println("Automation Test Run: " + result.getMethod().toString());
-            System.out.println("=====================================================================================================");
-        } else if (result.getStatus() == ITestResult.SKIP)
-        {
-            System.out.println("[INFO] === Test case "+result.getName()+" SKIPPED === ");
-            extentTest.log(Status.SKIP, MarkupHelper.createLabel(result.getName() + " Test Case SKIPPED.", ExtentColor.ORANGE));
-        }
-        driver.quit();
-        System.out.println(" === @AfterMethod method ended === ");
+	public void tearDown(ITestResult result) {
+		System.out.println("[INFO]  === @AfterMethod method STARTED === ");
+		if (driver != null) {
+			driver.manage().deleteAllCookies();
+			System.out.println("[INFO] === deleted AllCookies === ");
+		}
+		if (result.getStatus() == ITestResult.FAILURE) {
+			System.out.println("=====================================================================================================");
+			System.out.println("Automation Test Run: " + result.getMethod().toString());
+			System.out.println("[INFO] === Test case " + result.getName() + " is FAILED === ");
+			System.out.println("=====================================================================================================");
+			extentTest.log(Status.FAIL, MarkupHelper.createLabel(result.getName() + " Test case FAILED due to below issues:", ExtentColor.RED));
+			String filePath = System.getProperty("user.dir")+File.separator+"Screenshots"+File.separator+ result.getName() + ".png";
+			File file = new File(filePath);
+			System.out.println("[INFO] screenshot file exist: "+ file.exists());
+			if (file.exists()) {
+				extentTest.fail(result.getThrowable().getMessage(), MediaEntityBuilder.createScreenCaptureFromPath(filePath).build());
+			}
+
+		} else if (result.getStatus() == ITestResult.SUCCESS) {
+			System.out.println("=====================================================================================================");
+			System.out.println("Automation Test Run: " + result.getMethod().toString());
+			System.out.println("[INFO] === Test case " + result.getName() + " is PASSED === ");
+			System.out.println("=====================================================================================================");
+			extentTest.log(Status.PASS,MarkupHelper.createLabel(result.getName() + " Test Case PASSED.", ExtentColor.GREEN));
+		} else if (result.getStatus() == ITestResult.SKIP) {
+			System.out.println("=====================================================================================================");
+			System.out.println("Automation Test Run: " + result.getMethod().toString());
+			System.out.println("[INFO] === Test case " + result.getName() + " is SKIPPED === ");
+			System.out.println("=====================================================================================================");
+			extentTest.log(Status.SKIP,MarkupHelper.createLabel(result.getName() + " Test Case SKIPPED.", ExtentColor.ORANGE));
+		}
+		driver.quit();
+		System.out.println("[INFO]  === @AfterMethod method ENDED === ");
 	}
-	
-	   @AfterTest
-       public void testComplete() {
-		   System.out.println(" === @AfterTest method started === ");
-		   extentReport.flush();
-		   System.out.println(" === @AfterTest method ended === ");
-       }
-	   
-	   @AfterSuite
-	   public void suiteComplete() {
-		   System.out.println(" === @AfterSuite method executed === ");
-		   
-	   }
-	   
-	public void startBrowser(String browser) 
-	{
-		if(browser.equalsIgnoreCase("Chrome")) {
+
+	@AfterTest
+	public void shutDown() {
+		System.out.println("[INFO]  === @AfterTest method STARTED === ");
+		extentReport.flush();
+		System.out.println("[INFO]  === @AfterTest method ENDED === ");
+	}
+
+	@AfterSuite
+	public void suiteComplete() {
+		System.out.println("[INFO]  === @AfterSuite method executed === ");
+
+	}
+
+	public void startBrowser(String browser) {
+		if (browser.equalsIgnoreCase("Chrome")) {
 			ChromeOptions options = new ChromeOptions();
-		    HashMap<String, Object> chromePrefs = new HashMap<String, Object>();
-		    chromePrefs.put("profile.default_content_settings.popups", 0);
-		    chromePrefs.put("download.default_directory","./Downloads" );
-		    options.setExperimentalOption("prefs", chromePrefs);
-		    options.addArguments("--test-type");
-		    options.addArguments("start-maximized", "disable-popup-blocking");
+			HashMap<String, Object> chromePrefs = new HashMap<String, Object>();
+			chromePrefs.put("profile.default_content_settings.popups", 0);
+			chromePrefs.put("download.default_directory", "./Downloads");
+			options.setExperimentalOption("prefs", chromePrefs);
+			options.addArguments("--test-type");
+			options.addArguments("start-maximized", "disable-popup-blocking");
 			driver = new ChromeDriver(options);
-			
-		}else {
+
+		} else {
 			driver = new FirefoxDriver();
 		}
-		
+
 		driver.manage().window().maximize();
 		driver.get(App_link);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));

@@ -1,5 +1,6 @@
 package demoBanking.testCases;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.Status;
@@ -12,21 +13,34 @@ public class HomePageTC_002 extends BaseClass {
 	public void Home_page() {
 		LoginPage login = new LoginPage(driver);
 		login.getLogin(userid, userpwd);
-  
+		extentTest.log(Status.INFO, "Login to App is successful");
+		logger.info("Login to App is successful");
+		
+		
 		HomePage home = new HomePage(driver);
-		System.out.println("Entering to HomePage of Demo.Guru99");
-		extentTest.log(Status.INFO, " === Logged in to App successfully === ");
-		home.Home_Page();
-		logger.info(" --Entered wrong ID-- ");
+		extentTest.log(Status.INFO, "Demo.Guru99 HomePage is displayed");
+		logger.info("Demo.Guru99 HomePage is displayed");
+		
+		home.searchCustomer("1234");
+		extentTest.log(Status.INFO, "Entered wrong/invalid ID for search");
+		logger.info("Entered wrong/invalid ID for search");
+		
+		
 		String alertText = driver.switchTo().alert().getText();
-		logger.info(" === Alert seen: " + alertText+"  === ");
-		extentTest.log(Status.INFO, " === Alert seen: \"" + alertText+"\"  === ");
+		extentTest.log(Status.INFO, "Alert is displayed: " + alertText+"  === ");
+		logger.info("Alert is displayed: " + alertText+"  === ");
+		
+		if(alertText.contains("Customer does not exist")) {
+			Assert.assertTrue(true);
+			logger.info("Successfuly verified search user functionality with invalid user id");
+		} else {
+			Assert.assertTrue(false);
+			logger.info("Search with invalid user id is failed");
+		}
+		
 		driver.switchTo().alert().accept();
-		logger.info(" === Alert accepted === ");
-		extentTest.log(Status.INFO, " === Alert accepted === ");
-		logger.info("line is added");
-		extentTest.log(Status.INFO, " === line is added === ");
-
+		logger.info("Alert is accepted");
+		extentTest.log(Status.INFO, "Alert is accepted");
 	}
 
 }
