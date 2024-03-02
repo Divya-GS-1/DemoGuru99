@@ -70,7 +70,7 @@ public class BaseClass {
 		PropertyConfigurator.configure("./log4j.properties");
 
 		extentTest = extentReport.createTest(method.getName().toString());
-		extentTest.log(Status.INFO, " === " + method.getName().toString() + " test case STARTED === on  " + browser);
+		extentTest.log(Status.INFO, method.getName().toString() + " test case STARTED on  " + browser);
 		System.out.println("[INFO]  === @BeforeMethod method ENDED === ");
 	}
 
