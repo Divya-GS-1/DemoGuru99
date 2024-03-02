@@ -84,7 +84,7 @@ public class BaseClass {
 		if (result.getStatus() == ITestResult.FAILURE) {
 			System.out.println("=====================================================================================================");
 			System.out.println("Automation Test Run: " + result.getMethod().toString());
-			System.out.println("[INFO] === Test case " + result.getName() + " is FAILED === ");
+			System.out.println("[INFO] Test case " + result.getName() + " is FAILED");
 			System.out.println("=====================================================================================================");
 			extentTest.log(Status.FAIL, MarkupHelper.createLabel(result.getName() + " Test case FAILED due to below issues:", ExtentColor.RED));
 			String filePath = System.getProperty("user.dir")+File.separator+"Screenshots"+File.separator+ result.getName() + ".png";
@@ -97,13 +97,13 @@ public class BaseClass {
 		} else if (result.getStatus() == ITestResult.SUCCESS) {
 			System.out.println("=====================================================================================================");
 			System.out.println("Automation Test Run: " + result.getMethod().toString());
-			System.out.println("[INFO] === Test case " + result.getName() + " is PASSED === ");
+			System.out.println("[INFO] Test case " + result.getName() + " is PASSED");
 			System.out.println("=====================================================================================================");
 			extentTest.log(Status.PASS,MarkupHelper.createLabel(result.getName() + " Test Case PASSED.", ExtentColor.GREEN));
 		} else if (result.getStatus() == ITestResult.SKIP) {
 			System.out.println("=====================================================================================================");
 			System.out.println("Automation Test Run: " + result.getMethod().toString());
-			System.out.println("[INFO] === Test case " + result.getName() + " is SKIPPED === ");
+			System.out.println("[INFO] Test case " + result.getName() + " is SKIPPED");
 			System.out.println("=====================================================================================================");
 			extentTest.log(Status.SKIP,MarkupHelper.createLabel(result.getName() + " Test Case SKIPPED.", ExtentColor.ORANGE));
 		}
