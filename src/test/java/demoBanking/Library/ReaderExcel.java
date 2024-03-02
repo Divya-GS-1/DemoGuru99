@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
 
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
@@ -14,6 +15,7 @@ public class ReaderExcel {
 	XSSFSheet sheet;
 	File file;
 	XSSFWorkbook workbook;
+	FileOutputStream fos;
 	
 	ReaderExcel(String file_path, String sheetName){
 		
@@ -47,18 +49,12 @@ public class ReaderExcel {
 			sheet.createRow(rowNum).createCell(colNum).setCellValue(Data);
 		}
 		
-		FileOutputStream fos;
+		
 		try {
 			fos=new FileOutputStream(file);
 			workbook.write(fos);
 		} catch (Exception e) {
 			System.out.println("Exceptions occured: "+ e.getMessage());
 		}
-		fos.close();
-		workbook.close();
 	}
-	
-	
-	
-	
 }

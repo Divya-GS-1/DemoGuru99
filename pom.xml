@@ -32,7 +32,7 @@
 				<version>3.2.5</version>
 				<configuration>
 					<suiteXmlFiles>
-						<suiteXmlFile>SanitySuite.xml</suiteXmlFile>
+						<suiteXmlFile>RegressionSuite.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>

@@ -8,18 +8,16 @@
 	<test thread-count="5" name="ChromeSuite">
 		<parameter name="Browser" value="Chrome"></parameter>
 		<classes>
-<!-- 			<class name="demoBanking.testCases.LoginTC_001" /> -->
-<!-- 			<class name="demoBanking.testCases.HomePageTC_002" /> -->
-				<class name="demoBanking.testCases.LoginTC_2" />
-				<class name="demoBanking.testCases.CreateUser_TC003" />
+			<class name="demoBanking.testCases.LoginTC_001" />
+			<class name="demoBanking.testCases.HomePageTC_002" />
 		</classes>
 	</test>
-<!-- 	<test thread-count="5" name="FireFoxSuite"> -->
-<!-- 		<parameter name="Browser" value="FireFox"></parameter> -->
-<!-- 		<classes> -->
-<!-- 			<class name="demoBanking.testCases.LoginTC_001" /> -->
-<!-- 			<class name="demoBanking.testCases.HomePageTC_002" /> -->
-<!-- 				<class name="demoBanking.testCases.LoginTC_2" /> -->
-<!-- 		</classes> -->
-<!-- 	</test> -->
+	<!-- <test thread-count="5" name="FireFoxSuite"> -->
+	<!-- <parameter name="Browser" value="FireFox"></parameter> -->
+	<!-- <classes> -->
+	<!-- <class name="demoBanking.testCases.LoginTC_001" /> -->
+	<!-- <class name="demoBanking.testCases.HomePageTC_002" /> -->
+	<!-- <class name="demoBanking.testCases.LoginTC_2" /> -->
+	<!-- </classes> -->
+	<!-- </test> -->
 </suite>

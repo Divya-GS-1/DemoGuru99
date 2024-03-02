@@ -24,9 +24,9 @@ public class HomePage {
 		private WebElement Acc_Submit;
 		
 
-	public void Home_Page() {
+	public void searchCustomer(String CustomerId) {
 		Edit_Cust.click();
-		Enter_Id.sendKeys("1234567");
+		Enter_Id.sendKeys(CustomerId);
 		Acc_Submit.click();
 				
 	}
